@@ -11,5 +11,7 @@ package org.in5bm.davidquiñonez.eldrickhernandez.models;
 public class Cursos {
     
     
-    
+    /*@Override
+    public String toString(){
+    }*/
 }

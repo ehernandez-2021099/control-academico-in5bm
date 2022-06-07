@@ -80,4 +80,6 @@ public class AsignacionesAlumnos {
     public void setFechaAsignacion(LocalDate fechaAsignacion){
         this.fechaAsignacion.set(fechaAsignacion);
     }
+    
+    
 }

@@ -2,8 +2,6 @@
 
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Button?>
-<?import javafx.scene.control.ComboBox?>
-<?import javafx.scene.control.DatePicker?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
@@ -20,40 +18,31 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane id="AnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="1200.0" style="-fx-background-color: #D6EAF8;" stylesheets="@../resources/css/EstiloModulos.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.in5bm.davidquiñonez.eldrickhernandez.controllers.AsignacionAlumnosController">
+<AnchorPane id="AnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="1200.0" style="-fx-background-color: #D6EAF8;" stylesheets="@../resources/css/EstiloModulos.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
    <children>
       <BorderPane layoutX="-3.0" prefHeight="700.0" prefWidth="1207.0">
          <left>
-            <Pane id="panel-alumnos" prefHeight="557.0" prefWidth="220.0" BorderPane.alignment="CENTER">
+            <Pane id="panel-alumnos" prefWidth="220.0" BorderPane.alignment="CENTER">
                <children>
-                  <Pane id="pane-modulos" layoutX="27.0" prefHeight="182.0" prefWidth="166.0">
+                  <Pane id="pane-modulos" layoutX="27.0" prefHeight="154.0" prefWidth="166.0">
                      <children>
-                        <VBox alignment="CENTER" layoutX="-8.0" layoutY="10.0" prefHeight="163.0" prefWidth="184.0">
+                        <VBox id="pane-modulos" alignment="CENTER" layoutX="-8.0" layoutY="-18.0" prefHeight="176.0" prefWidth="184.0" stylesheets="@../resources/css/EstiloModulos.css">
                            <children>
-                              <Label alignment="CENTER" prefHeight="59.0" prefWidth="171.0" text="ASIGNACIÓN" textAlignment="CENTER">
+                              <Label id="label-modulos" alignment="CENTER" prefHeight="54.0" prefWidth="171.0" text="Entidad" textAlignment="CENTER">
                                  <font>
-                                    <Font name="Times New Roman Bold" size="25.0" />
+                                    <Font name="Sylfaen" size="25.0" />
                                  </font>
                               </Label>
-                              <Label id="label-modulos" alignment="CENTER" prefHeight="54.0" prefWidth="171.0" text="ALUMNOS" textAlignment="CENTER">
-                                 <font>
-                                    <Font name="Times New Roman Bold" size="25.0" />
-                                 </font>
-                              </Label>
-                              <ImageView fitHeight="92.0" fitWidth="103.0" pickOnBounds="true" smooth="false">
-                                 <image>
-                                    <Image url="@../resources/images/recurso.png" />
-                                 </image>
-                              </ImageView>
+                              <ImageView fitHeight="92.0" fitWidth="103.0" pickOnBounds="true" smooth="false" />
                            </children>
                         </VBox>
                      </children>
                   </Pane>
-                  <VBox layoutX="8.0" layoutY="237.0" prefHeight="369.0" prefWidth="204.0">
+                  <VBox layoutX="9.0" layoutY="219.0" prefHeight="407.0" prefWidth="203.0">
                      <children>
                         <HBox prefHeight="69.0" prefWidth="174.0">
                            <children>
-                              <Button fx:id="btnNuevo" alignment="CENTER" graphicTextGap="20.0" mnemonicParsing="false" onAction="#clicNuevo" prefHeight="96.0" prefWidth="187.0" styleClass="botones-crud" text="Nuevo" textOverrun="CLIP">
+                              <Button fx:id="btnNuevo" alignment="CENTER" graphicTextGap="20.0" mnemonicParsing="false" onAction="#clicNuevo" prefHeight="85.0" prefWidth="218.0" styleClass="botones-crud" text="Nuevo" textOverrun="CLIP">
                                  <opaqueInsets>
                                     <Insets />
                                  </opaqueInsets>
@@ -102,7 +91,7 @@
                                     <Font name="Times New Roman Bold" size="18.0" />
                                  </font>
                                  <HBox.margin>
-                                    <Insets bottom="15.0" left="8.0" />
+                                    <Insets bottom="20.0" left="8.0" />
                                  </HBox.margin>
                                  <graphic>
                                     <ImageView fx:id="imgEliminar" fitHeight="65.0" fitWidth="65.0" pickOnBounds="true" preserveRatio="true">
@@ -124,7 +113,7 @@
                                     <Insets left="8.0" />
                                  </HBox.margin>
                                  <graphic>
-                                    <ImageView fitHeight="65.0" fitWidth="65.0" pickOnBounds="true" preserveRatio="true">
+                                    <ImageView fx:id="imgReporte" fitHeight="65.0" fitWidth="65.0" pickOnBounds="true" preserveRatio="true">
                                        <image>
                                           <Image url="@../resources/images/estadistica-inferencial.png" />
                                        </image>
@@ -139,21 +128,14 @@
             </Pane>
          </left>
          <center>
-            <AnchorPane prefHeight="578.0" prefWidth="742.0" BorderPane.alignment="CENTER">
+            <AnchorPane prefHeight="502.0" prefWidth="605.0" BorderPane.alignment="CENTER">
                <children>
-                  <ImageView fitHeight="76.0" fitWidth="234.0" layoutX="362.0" layoutY="17.0" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="@../resources/images/ColegioLogo.png" />
-                     </image>
-                  </ImageView>
-                  <Label prefHeight="17.0" prefWidth="979.0" styleClass="label-extremos" text="." />
-                  <Label layoutX="976.0" prefHeight="705.0" prefWidth="17.0" styleClass="label-extremos" />
-                  <GridPane layoutX="10.0" layoutY="75.0" prefHeight="158.0" prefWidth="947.0">
+                  <GridPane layoutX="77.0" layoutY="84.0" prefHeight="176.0" prefWidth="808.0">
                      <columnConstraints>
-                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="300.0" minWidth="0.0" prefWidth="107.0" />
-                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="352.0" minWidth="10.0" prefWidth="223.0" />
-                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="263.0" minWidth="10.0" prefWidth="191.0" />
-                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="297.0" minWidth="10.0" prefWidth="290.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
                      </columnConstraints>
                      <rowConstraints>
                         <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
@@ -161,67 +143,70 @@
                         <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                      </rowConstraints>
                      <children>
-                        <Label prefHeight="19.0" prefWidth="107.0" text="Id">
-                           <font>
-                              <Font name="Times New Roman Bold" size="14.0" />
-                           </font>
-                           <GridPane.margin>
-                              <Insets left="50.0" />
-                           </GridPane.margin>
-                        </Label>
-                        <Label text="Cursos" GridPane.columnIndex="2">
-                           <font>
-                              <Font name="Times New Roman Bold" size="14.0" />
-                           </font>
-                           <GridPane.margin>
-                              <Insets left="80.0" />
-                           </GridPane.margin>
-                        </Label>
-                        <Label text="Fecha Asignacion" GridPane.columnIndex="2" GridPane.rowIndex="1">
-                           <GridPane.margin>
-                              <Insets left="55.0" />
-                           </GridPane.margin>
+                        <Label styleClass="label-grid" text="Campo 1">
                            <font>
                               <Font name="Times New Roman Bold" size="14.0" />
                            </font>
                         </Label>
-                        <TextField fx:id="txtId" disable="true" editable="false" prefHeight="25.0" prefWidth="168.0" GridPane.columnIndex="1">
-                           <GridPane.margin>
-                              <Insets />
-                           </GridPane.margin>
-                        </TextField>
-                        <ComboBox fx:id="cmbAlumno" editable="true" prefHeight="29.0" prefWidth="285.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
-                        <ComboBox fx:id="cmbIdCursos" disable="true" editable="true" prefHeight="29.0" prefWidth="234.0" GridPane.columnIndex="3" />
-                        <DatePicker fx:id="dpFechaAsignacion" disable="true" prefHeight="29.0" prefWidth="234.0" GridPane.columnIndex="3" GridPane.rowIndex="1" />
-                        <Label text="Alumno" GridPane.rowIndex="1">
+                        <Label styleClass="label-grid" text="Campo 2" GridPane.columnIndex="2">
                            <font>
                               <Font name="Times New Roman Bold" size="14.0" />
                            </font>
-                           <GridPane.margin>
-                              <Insets left="40.0" />
-                           </GridPane.margin>
                         </Label>
+                        <Label styleClass="label-grid" text="Campo 3" GridPane.rowIndex="1">
+                           <font>
+                              <Font name="Times New Roman Bold" size="14.0" />
+                           </font>
+                        </Label>
+                        <Label styleClass="label-grid" text="Campo 4" GridPane.columnIndex="2" GridPane.rowIndex="1">
+                           <font>
+                              <Font name="Times New Roman Bold" size="14.0" />
+                           </font>
+                        </Label>
+                        <Label styleClass="label-grid" text="Campo 5" GridPane.rowIndex="2">
+                           <font>
+                              <Font name="Times New Roman Bold" size="14.0" />
+                           </font>
+                        </Label>
+                        <Label styleClass="label-grid" text="Campo 6" GridPane.columnIndex="2" GridPane.rowIndex="2">
+                           <font>
+                              <Font name="Times New Roman Bold" size="14.0" />
+                           </font>
+                        </Label>
+                        <TextField disable="true" editable="false" prefHeight="26.0" prefWidth="63.0" GridPane.columnIndex="1" />
+                        <TextField disable="true" editable="false" GridPane.columnIndex="3" />
+                        <TextField disable="true" editable="false" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                        <TextField disable="true" editable="false" GridPane.columnIndex="3" GridPane.rowIndex="1" />
+                        <TextField disable="true" editable="false" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                        <TextField disable="true" editable="false" GridPane.columnIndex="3" GridPane.rowIndex="2" />
                      </children>
                   </GridPane>
-                  <TableView fx:id="tblAsignacionAlumnos" layoutX="11.0" layoutY="256.0" onMouseClicked="#seleccionarElemento" prefHeight="430.0" prefWidth="951.0">
+                  <TableView id="table-view" layoutX="16.0" layoutY="254.0" onKeyReleased="#seleccionarElemento" onMouseClicked="#seleccionarElemento" prefHeight="426.0" prefWidth="929.0">
                      <columns>
-                        <TableColumn fx:id="colid" prefWidth="62.0" text="Id" />
-                        <TableColumn fx:id="colCarne" prefWidth="118.0" text="Carné" />
-                        <TableColumn fx:id="colNombreAlumno" minWidth="0.0" prefWidth="345.0" text="Nombre Alumno" />
-                        <TableColumn fx:id="ColCursos" prefWidth="66.0" text="Id Cursos" />
-                        <TableColumn fx:id="colNombreCurso" prefWidth="222.0" text="Nombre Curso" />
-                        <TableColumn fx:id="colFechaAsignacion" prefWidth="137.0" text="Fecha Asignacion" />
+                        <TableColumn prefWidth="85.0" text="C1" />
+                        <TableColumn prefWidth="161.0" text="C2" />
+                        <TableColumn minWidth="0.0" prefWidth="146.0" text="C3" />
+                        <TableColumn prefWidth="185.0" text="C4" />
+                        <TableColumn prefWidth="183.0" text="C5" />
+                        <TableColumn prefWidth="168.0" text="C6" />
                      </columns>
                   </TableView>
-                  <Label layoutX="-7.0" layoutY="686.0" prefHeight="19.0" prefWidth="991.0" styleClass="label-extremos" text="." />
-                  <ImageView fitHeight="54.0" fitWidth="58.0" layoutX="884.0" layoutY="20.0" onMouseClicked="#clicRegresar" pickOnBounds="true" preserveRatio="true">
+                  <Label layoutY="35.0" prefHeight="19.0" prefWidth="331.0" styleClass="label-extremos" text="." />
+                  <Label layoutX="605.0" layoutY="35.0" prefHeight="19.0" prefWidth="271.0" styleClass="label-extremos" text="." />
+                  <Label layoutX="-4.0" layoutY="686.0" prefHeight="18.0" prefWidth="988.0" styleClass="label-extremos" text="." />
+                  <Label prefHeight="18.0" prefWidth="984.0" styleClass="label-extremos" text="." />
+                  <ImageView fitHeight="51.0" fitWidth="50.0" layoutX="887.0" layoutY="20.0" onMouseClicked="#clicRegresar" pickOnBounds="true" preserveRatio="true">
                      <image>
                         <Image url="@../resources/images/esquema-de-boton-circular-de-flecha-hacia-atras-izquierda.png" />
                      </image>
                   </ImageView>
-                  <Label layoutX="-20.0" layoutY="33.0" prefHeight="19.0" prefWidth="369.0" styleClass="label-extremos" text="." />
-                  <Label layoutX="604.0" layoutY="33.0" prefHeight="19.0" prefWidth="265.0" styleClass="label-extremos" text="." />
-                  <Label layoutX="948.0" layoutY="33.0" prefHeight="19.0" prefWidth="36.0" styleClass="label-extremos" text="." />
+                  <Label layoutX="943.0" layoutY="35.0" prefHeight="18.0" prefWidth="25.0" styleClass="label-extremos" text="." />
+                  <Label layoutX="965.0" layoutY="7.0" prefHeight="690.0" prefWidth="18.0" styleClass="label-extremos" />
+                  <ImageView fitHeight="76.0" fitWidth="234.0" layoutX="352.0" layoutY="18.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../resources/images/ColegioLogo.png" />
+                     </image>
+                  </ImageView>
                </children>
             </AnchorPane>
          </center>
