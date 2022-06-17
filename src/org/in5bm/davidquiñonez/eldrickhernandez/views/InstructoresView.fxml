@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import com.jfoenix.controls.JFXDatePicker?>
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
@@ -18,7 +19,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane id="AnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="1200.0" style="-fx-background-color: #D6EAF8;" stylesheets="@../resources/css/EstiloModulos.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane id="AnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="1200.0" style="-fx-background-color: #D6EAF8;" stylesheets="@../resources/css/EstiloModulos.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.in5bm.davidquiñonez.eldrickhernandez.controllers.InstructoresController">
    <children>
       <BorderPane layoutX="-3.0" prefHeight="700.0" prefWidth="1207.0">
          <left>
@@ -28,12 +29,15 @@
                      <children>
                         <VBox id="pane-modulos" alignment="CENTER" layoutX="-8.0" layoutY="-18.0" prefHeight="176.0" prefWidth="184.0" stylesheets="@../resources/css/EstiloModulos.css">
                            <children>
-                              <Label id="label-modulos" alignment="CENTER" prefHeight="54.0" prefWidth="171.0" text="Entidad" textAlignment="CENTER">
+                              <Label id="label-modulos" alignment="CENTER" prefHeight="54.0" prefWidth="190.0" text="INTRUCTORES" textAlignment="CENTER">
                                  <font>
                                     <Font name="Sylfaen" size="25.0" />
                                  </font>
                               </Label>
-                              <ImageView fitHeight="92.0" fitWidth="103.0" pickOnBounds="true" smooth="false" />
+                              <ImageView fitHeight="92.0" fitWidth="103.0" pickOnBounds="true" smooth="false">
+                                 <image>
+                                    <Image url="@../resources/images/instructor.png" />
+                                 </image></ImageView>
                            </children>
                         </VBox>
                      </children>
@@ -130,8 +134,10 @@
          <center>
             <AnchorPane prefHeight="502.0" prefWidth="605.0" BorderPane.alignment="CENTER">
                <children>
-                  <GridPane layoutX="77.0" layoutY="84.0" prefHeight="176.0" prefWidth="808.0">
+                  <GridPane layoutX="7.0" layoutY="84.0" prefHeight="176.0" prefWidth="952.0">
                      <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
                         <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
                         <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
                         <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
@@ -141,54 +147,83 @@
                         <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                         <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                         <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                      </rowConstraints>
                      <children>
-                        <Label styleClass="label-grid" text="Campo 1">
+                        <Label prefHeight="16.0" prefWidth="130.0" styleClass="label-grid" text="     Id">
                            <font>
                               <Font name="Times New Roman Bold" size="14.0" />
                            </font>
                         </Label>
-                        <Label styleClass="label-grid" text="Campo 2" GridPane.columnIndex="2">
+                        <Label prefHeight="16.0" prefWidth="136.0" styleClass="label-grid" text="    Primer nombre " GridPane.columnIndex="2">
                            <font>
                               <Font name="Times New Roman Bold" size="14.0" />
                            </font>
                         </Label>
-                        <Label styleClass="label-grid" text="Campo 3" GridPane.rowIndex="1">
+                        <Label styleClass="label-grid" text="     Tercer nombre " GridPane.rowIndex="1">
                            <font>
                               <Font name="Times New Roman Bold" size="14.0" />
                            </font>
                         </Label>
-                        <Label styleClass="label-grid" text="Campo 4" GridPane.columnIndex="2" GridPane.rowIndex="1">
+                        <Label prefHeight="16.0" prefWidth="125.0" styleClass="label-grid" text="    Email" GridPane.columnIndex="2" GridPane.rowIndex="2">
                            <font>
                               <Font name="Times New Roman Bold" size="14.0" />
                            </font>
                         </Label>
-                        <Label styleClass="label-grid" text="Campo 5" GridPane.rowIndex="2">
+                        <Label prefHeight="16.0" prefWidth="137.0" styleClass="label-grid" text="    Primer apellido" GridPane.columnIndex="2" GridPane.rowIndex="1">
                            <font>
                               <Font name="Times New Roman Bold" size="14.0" />
                            </font>
                         </Label>
-                        <Label styleClass="label-grid" text="Campo 6" GridPane.columnIndex="2" GridPane.rowIndex="2">
+                        <Label styleClass="label-grid" text="     Segundo apellido" GridPane.columnIndex="4" GridPane.rowIndex="1">
                            <font>
                               <Font name="Times New Roman Bold" size="14.0" />
                            </font>
                         </Label>
-                        <TextField disable="true" editable="false" prefHeight="26.0" prefWidth="63.0" GridPane.columnIndex="1" />
-                        <TextField disable="true" editable="false" GridPane.columnIndex="3" />
-                        <TextField disable="true" editable="false" GridPane.columnIndex="1" GridPane.rowIndex="1" />
-                        <TextField disable="true" editable="false" GridPane.columnIndex="3" GridPane.rowIndex="1" />
-                        <TextField disable="true" editable="false" GridPane.columnIndex="1" GridPane.rowIndex="2" />
-                        <TextField disable="true" editable="false" GridPane.columnIndex="3" GridPane.rowIndex="2" />
+                        <TextField fx:id="txtId" disable="true" editable="false" prefHeight="26.0" prefWidth="63.0" GridPane.columnIndex="1" />
+                        <TextField fx:id="txtNombre1" disable="true" editable="false" GridPane.columnIndex="3" />
+                        <TextField fx:id="txtNombre3" disable="true" editable="false" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                        <TextField fx:id="txtApellido1" disable="true" editable="false" GridPane.columnIndex="3" GridPane.rowIndex="1" />
+                        <TextField fx:id="txtDireccion" disable="true" editable="false" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                        <Label styleClass="label-grid" text="    Fecha de nacimiento" GridPane.columnIndex="2" GridPane.rowIndex="3">
+                           <font>
+                              <Font name="Times New Roman Bold" size="14.0" />
+                           </font>
+                        </Label>
+                        <Label styleClass="label-grid" text="     Segundo nombre " GridPane.columnIndex="4">
+                           <font>
+                              <Font name="Times New Roman Bold" size="14.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="txtApellido2" disable="true" editable="false" GridPane.columnIndex="5" GridPane.rowIndex="1" />
+                        <TextField fx:id="txtNombre2" disable="true" editable="false" prefHeight="26.0" prefWidth="63.0" GridPane.columnIndex="5" />
+                        <TextField fx:id="txtEmail" disable="true" editable="false" GridPane.columnIndex="3" GridPane.rowIndex="2" />
+                        <TextField fx:id="txtTelefono" disable="true" editable="false" GridPane.columnIndex="5" GridPane.rowIndex="2" />
+                        <Label prefHeight="16.0" prefWidth="82.0" styleClass="label-grid" text="    Teléfono" GridPane.columnIndex="4" GridPane.rowIndex="2">
+                           <font>
+                              <Font name="Times New Roman Bold" size="14.0" />
+                           </font>
+                        </Label>
+                        <Label prefHeight="16.0" prefWidth="94.0" styleClass="label-grid" text="    Dirección" GridPane.rowIndex="2">
+                           <font>
+                              <Font name="Times New Roman Bold" size="14.0" />
+                           </font>
+                        </Label>
+                        <JFXDatePicker fx:id="dpFechaAsignacion" defaultColor="#1a5276" disable="true" editable="false" prefHeight="29.0" prefWidth="230.0" GridPane.columnIndex="3" GridPane.rowIndex="3" />
                      </children>
                   </GridPane>
-                  <TableView id="table-view" layoutX="16.0" layoutY="254.0" onKeyReleased="#seleccionarElemento" onMouseClicked="#seleccionarElemento" prefHeight="426.0" prefWidth="929.0">
+                  <TableView id="table-view" fx:id="tblInstructores" layoutX="15.0" layoutY="279.0" onKeyReleased="#seleccionarElemento" onMouseClicked="#seleccionarElemento" prefHeight="402.0" prefWidth="929.0">
                      <columns>
-                        <TableColumn prefWidth="85.0" text="C1" />
-                        <TableColumn prefWidth="161.0" text="C2" />
-                        <TableColumn minWidth="0.0" prefWidth="146.0" text="C3" />
-                        <TableColumn prefWidth="185.0" text="C4" />
-                        <TableColumn prefWidth="183.0" text="C5" />
-                        <TableColumn prefWidth="168.0" text="C6" />
+                        <TableColumn fx:id="colId" prefWidth="74.0" text="Id" />
+                        <TableColumn fx:id="colNombre1" prefWidth="79.0" text="Nombre 1" />
+                        <TableColumn fx:id="colNombre2" minWidth="0.0" prefWidth="84.0" text="Nombre 2" />
+                        <TableColumn fx:id="colNombre3" prefWidth="87.0" text="Nombre 3 " />
+                        <TableColumn fx:id="colApellido1" prefWidth="112.0" text="Apellido 1" />
+                        <TableColumn fx:id="colApellido2" prefWidth="125.0" text="Apellido 2" />
+                        <TableColumn fx:id="colDireccion" prefWidth="109.0" text="Dirección" />
+                        <TableColumn fx:id="colEmail" prefWidth="100.0" text="Email" />
+                        <TableColumn fx:id="colTelefono" prefWidth="98.0" text="Teléfono" />
+                        <TableColumn fx:id="colFecha" prefWidth="75.0" text="Fecha de nacimiento" />
                      </columns>
                   </TableView>
                   <Label layoutY="35.0" prefHeight="19.0" prefWidth="331.0" styleClass="label-extremos" text="." />

@@ -16,6 +16,8 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Map;
 import java.util.Optional;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
@@ -24,10 +26,11 @@ import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.image.ImageView;
 import org.in5bm.davidquiñonez.eldrickhernandez.db.Conexion;
 import org.in5bm.davidquiñonez.eldrickhernandez.models.Alumnos;
+/*import org.in5bm.davidquiñonez.eldrickhernandez.reports.GenerarReporte;*/
 
 /**
  *
- * @author David Quiñonez
+ * @author David-Eldrick
  */
 public class AlumnosController implements Initializable {
 
@@ -371,7 +374,13 @@ public class AlumnosController implements Initializable {
                     validacionI();
                 } else if (txtApellido1.getText().isEmpty()) {
                     validacionI();
-                } else if (agregarAlumno()) {
+                } else if (txtCarne.getText().length() > 7){
+                    validacionI();
+                } else if (txtNombre1.getText().length() > 15){
+                    validacionI();
+                } else if(txtApellido1.getText().length() > 15){
+                    validacionI();
+                }else if (agregarAlumno()) {
 
                     cargarDatos();
                     limpiarCampos();
@@ -572,6 +581,10 @@ public class AlumnosController implements Initializable {
         stage.getIcons().add(new Image(PAQUETE_IMAGES + "aprender-en-linea.png"));
         // stage.getIcons().add(new Image(this.getClass().getResource("../resources/images/aprender-en-linea.png").toString()));
         alerta.show();
+        /*Map<String, Object> parametros = new HashMap<>();
+        parametros.put("nombre", "Eldric Aldair");
+        
+        GenerarReporte.getInstance().mostrarReporte("Pantalla.jasper", parametro);*/
     }
 
 
@@ -604,20 +617,25 @@ public class AlumnosController implements Initializable {
 
     private void validacionI() {
         Alert alerta = new Alert(Alert.AlertType.WARNING);
-
         alerta.setTitle("Control Academico - El Bosque");
         alerta.setHeaderText(null);
-        alerta.setContentText("Le falta ingresar Carne");
         Stage stagee = (Stage) alerta.getDialogPane().getScene().getWindow();
         stagee.getIcons().add(new Image(PAQUETE_IMAGES + "aprender-en-linea.png"));
         alerta.show();
+        
         if (txtCarne.getText().isEmpty()) {
             alerta.setContentText("Le falta ingresar Carne");
         } else if (txtNombre1.getText().isEmpty()) {
             alerta.setContentText("Le falta ingresar Primer Nombre");
         } else if (txtApellido1.getText().isEmpty()) {
             alerta.setContentText("Le falta ingresar Primer Apellido");
-        }
+        } else if (txtCarne.getText().length() > 7){
+            alerta.setContentText("El Carne se pasa del valor establecido |7|");
+        } else if (txtNombre1.getText().length() > 15){
+            alerta.setContentText("El nombres se pasa del valor establecido |15|");
+        } else if (txtApellido1.getText().length() > 15){
+            alerta.setContentText("El nombres se pasa del valor establecido |15|");
+        } 
     }
 
 }

@@ -12,12 +12,13 @@
     </editor-bookmarks>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/Users/David%20Quiñonez/OneDrive/Escritorio/in5bm-control-academico-dquiñonez_ehernandez/src/org/in5bm/davidquiñonez/eldrickhernandez/controllers/AlumnosController.java</file>
-            <file>file:/C:/Users/David%20Quiñonez/OneDrive/Escritorio/in5bm-control-academico-dquiñonez_ehernandez/src/org/in5bm/davidquiñonez/eldrickhernandez/controllers/SalonesController.java</file>
-            <file>file:/C:/Users/David%20Quiñonez/OneDrive/Escritorio/in5bm-control-academico-dquiñonez_ehernandez/src/org/in5bm/davidquiñonez/eldrickhernandez/controllers/AsignacionAlumnosController.java</file>
-            <file>file:/C:/Users/David%20Quiñonez/OneDrive/Escritorio/in5bm-control-academico-dquiñonez_ehernandez/src/org/in5bm/davidquiñonez/eldrickhernandez/controllers/CarrerasTecnicasController.java</file>
-            <file>file:/C:/Users/David%20Quiñonez/OneDrive/Escritorio/in5bm-control-academico-dquiñonez_ehernandez/src/org/in5bm/davidquiñonez/eldrickhernandez/system/Principal.java</file>
-            <file>file:/C:/Users/David%20Quiñonez/OneDrive/Escritorio/in5bm-control-academico-dquiñonez_ehernandez/src/org/in5bm/davidquiñonez/eldrickhernandez/controllers/MenuPrincipalController.java</file>
+            <file>file:/D:/Aqui/in5bm-control-academico-dquiñonez_ehernandez/src/org/in5bm/davidquiñonez/eldrickhernandez/reports/GenerarReporte.java</file>
+            <file>file:/D:/Aqui/in5bm-control-academico-dquiñonez_ehernandez/src/org/in5bm/davidquiñonez/eldrickhernandez/controllers/InstructoresController.java</file>
+            <file>file:/D:/Aqui/in5bm-control-academico-dquiñonez_ehernandez/src/org/in5bm/davidquiñonez/eldrickhernandez/controllers/AlumnosController.java</file>
+            <file>file:/D:/Aqui/in5bm-control-academico-dquiñonez_ehernandez/src/org/in5bm/davidquiñonez/eldrickhernandez/models/Instructores.java</file>
+            <file>file:/D:/Aqui/in5bm-control-academico-dquiñonez_ehernandez/src/org/in5bm/davidquiñonez/eldrickhernandez/models/Cursos.java</file>
+            <file>file:/D:/Aqui/in5bm-control-academico-dquiñonez_ehernandez/src/org/in5bm/davidquiñonez/eldrickhernandez/controllers/AsignacionAlumnosController.java</file>
+            <file>file:/D:/Aqui/in5bm-control-academico-dquiñonez_ehernandez/src/org/in5bm/davidquiñonez/eldrickhernandez/system/Principal.java</file>
         </group>
     </open-files>
 </project-private>
